@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EF722A63-6C6B-467D-972F-DEDB73B690C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MoneySQContext</RootNamespace>
+    <AssemblyName>MoneySQContext</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApiModels\ApiLoanApplication.cs" />
+    <Compile Include="ApiModels\JsonLoanApplication.cs" />
+    <Compile Include="LASTWModels\addressLog.cs" />
+    <Compile Include="LASTWModels\application_media.cs" />
+    <Compile Include="LASTWModels\approvalLog.cs" />
+    <Compile Include="LASTWModels\carLicense.cs" />
+    <Compile Include="LASTWModels\comUser.cs" />
+    <Compile Include="LASTWModels\followup_issues.cs" />
+    <Compile Include="LASTWModels\followup_issuesItem.cs" />
+    <Compile Include="LASTWModels\followup_issueType.cs" />
+    <Compile Include="LASTWModels\followup_status.cs" />
+    <Compile Include="LASTWModels\history.cs" />
+    <Compile Include="LASTWModels\legalCase.cs" />
+    <Compile Include="LASTWModels\legalCase_Status.cs" />
+    <Compile Include="LASTWModels\loanApplication.cs" />
+    <Compile Include="LASTWModels\loanApplicationLog.cs" />
+    <Compile Include="LASTWModels\loanApplicationPassStevenLog.cs" />
+    <Compile Include="LASTWModels\loanApplicationPayableTo.cs" />
+    <Compile Include="LASTWModels\loanApplicationRejReason.cs" />
+    <Compile Include="LASTWModels\loanApplicationSMSlog.cs" />
+    <Compile Include="LASTWModels\loanApplication_address.cs" />
+    <Compile Include="LASTWModels\loanApplication_addressValuation.cs" />
+    <Compile Include="LASTWModels\loanApplication_audit.cs" />
+    <Compile Include="LASTWModels\loanApplication_contractProperty.cs" />
+    <Compile Include="LASTWModels\loanApplication_customer.cs" />
+    <Compile Include="LASTWModels\loanApplication_exCustomer.cs" />
+    <Compile Include="LASTWModels\loanApplication_exCustomer_borrower.cs" />
+    <Compile Include="LASTWModels\loanApplication_exCustomer_property.cs" />
+    <Compile Include="LASTWModels\loanApplication_exCustomer_raw.cs" />
+    <Compile Include="LASTWModels\loanApplication_exCustomer_reply.cs" />
+    <Compile Include="LASTWModels\loanApplication_exCustomer_status.cs" />
+    <Compile Include="LASTWModels\loanApplication_PropertyType.cs" />
+    <Compile Include="LASTWModels\loanApplication_status.cs" />
+    <Compile Include="LASTWModels\media.cs" />
+    <Compile Include="LASTWModels\mortgageCar_schedule.cs" />
+    <Compile Include="LASTWModels\mortgageCar_schedule_log.cs" />
+    <Compile Include="LASTWModels\mortgageCar_Survey.cs" />
+    <Compile Include="LASTWModels\mortgage_log.cs" />
+    <Compile Include="LASTWModels\privacy.cs" />
+    <Compile Include="LASTWModels\refinanceApplication.cs" />
+    <Compile Include="LASTWModels\refinanceApplicationLog.cs" />
+    <Compile Include="LASTWModels\refinanceApprovalLog.cs" />
+    <Compile Include="LASTWModels\refinanceAttachmentLog.cs" />
+    <Compile Include="LASTWModels\refinanceItem.cs" />
+    <Compile Include="LASTWModels\refinancePayableTo.cs" />
+    <Compile Include="LASTWModels\refinanceReplyHistory.cs" />
+    <Compile Include="LASTWModels\refinanceRetentionReport.cs" />
+    <Compile Include="LASTWModels\refinanceStatus.cs" />
+    <Compile Include="LASTWModels\sysdiagrams.cs" />
+    <Compile Include="LASTWModels\systemConfiguration_log.cs" />
+    <Compile Include="LASTWModels\SystemMessage.cs" />
+    <Compile Include="LASTWModels\UserActivityLog.cs" />
+    <Compile Include="Models\CB_CREDIT_CHECK_LEGAL_OPINION.cs" />
+    <Compile Include="Models\CB_CREDIT_CHECK_REPROT.cs" />
+    <Compile Include="Models\CB_CREDIT_CHECK_REPROT_APPROVEMENT.cs" />
+    <Compile Include="Models\CB_CREDIT_CHECK_REPROT_ATTACHMENT.cs" />
+    <Compile Include="Models\CB_CREDIT_CHECK_SCORING.cs" />
+    <Compile Include="Models\CB_CREDIT_RISK_RANK.cs" />
+    <Compile Include="Models\CB_CREDIT_RISK_RANK_VSESION.cs" />
+    <Compile Include="Models\CB_SCORING_CARD_ASSEMBLAGE.cs" />
+    <Compile Include="Models\CB_SCORING_CARD_ITEM.cs" />
+    <Compile Include="Models\CB_SCORING_CARD_LEVEL.cs" />
+    <Compile Include="Models\CB_SCORING_CARD_VERSION.cs" />
+    <Compile Include="Models\CC_APPRAISAL_BUILDING.cs" />
+    <Compile Include="Models\CC_APPRAISAL_BUILDING_CONTENT.cs" />
+    <Compile Include="Models\CC_APPRAISAL_LAND.cs" />
+    <Compile Include="Models\CC_APPRAISAL_REPORT.cs" />
+    <Compile Include="Models\CC_APPRAISAL_REPORT_APPROVEMENT.cs" />
+    <Compile Include="Models\CC_APPRAISAL_REPORT_ATTACHMENT.cs" />
+    <Compile Include="Models\DA_CONTRACT.cs" />
+    <Compile Include="Models\DA_CONTRACTOR.cs" />
+    <Compile Include="Models\DA_CONTRACT_AMORTIZATION_DETAILS.cs" />
+    <Compile Include="Models\DA_CONTRACT_AMORTIZATION_DETAILS_PAYMENT.cs" />
+    <Compile Include="Models\DA_CONTRACT_AMORTIZATION_DETAILS_VOUCHER.cs" />
+    <Compile Include="Models\DA_CONTRACT_APPLICATION.cs" />
+    <Compile Include="Models\DA_CONTRACT_APPROVEMENT.cs" />
+    <Compile Include="Models\DA_CONTRACT_ATTACHMENT.cs" />
+    <Compile Include="Models\DA_CONTRACT_CHECK_ITEM.cs" />
+    <Compile Include="Models\DA_CONTRACT_CHEQUE.cs" />
+    <Compile Include="Models\DA_CONTRACT_COLLATERAL.cs" />
+    <Compile Include="Models\DA_CONTRACT_CONTROL.cs" />
+    <Compile Include="Models\DA_CONTRACT_CUSTOMER_CONTACT_LOG.cs" />
+    <Compile Include="Models\DA_CONTRACT_FORECLOSURE_EVALUATION.cs" />
+    <Compile Include="Models\DA_CONTRACT_HOUSEHOLD_REGISTRATION_APPLICATION.cs" />
+    <Compile Include="Models\DA_CONTRACT_INCOME.cs" />
+    <Compile Include="Models\DA_CONTRACT_INCOME_DETAIL.cs" />
+    <Compile Include="Models\DA_CONTRACT_INTERIM_ACCOUNT.cs" />
+    <Compile Include="Models\DA_CONTRACT_LEGAL_ACTION_INSTRUCTION.cs" />
+    <Compile Include="Models\DA_CONTRACT_LEGAL_ATTEST_LETTERS.cs" />
+    <Compile Include="Models\DA_CONTRACT_LEGAL_PETITION.cs" />
+    <Compile Include="Models\DA_CONTRACT_MATCHED.cs" />
+    <Compile Include="Models\DA_CONTRACT_MESSAGE.cs" />
+    <Compile Include="Models\DA_CONTRACT_PAYMENT.cs" />
+    <Compile Include="Models\DA_CONTRACT_PROPERTY.cs" />
+    <Compile Include="Models\DA_CONTRACT_PROPERTY_DETAIL.cs" />
+    <Compile Include="Models\DA_CONTRACT_REPAYMENT_DETAILS.cs" />
+    <Compile Include="Models\DA_CONTRACT_REPAYMENT_DETAILS_VOUCHER.cs" />
+    <Compile Include="Models\DA_CONTRACT_SEAL_UP.cs" />
+    <Compile Include="Models\DA_CONTRACT_TAXATION_INFORMATION_APPLICATION.cs" />
+    <Compile Include="Models\DA_DEBIT_NOTE_CONTROL.cs" />
+    <Compile Include="Models\DA_DEBIT_NOTE_CONTROL_APPROVEMENT.cs" />
+    <Compile Include="Models\DA_DEBIT_NOTE_DETAIL.cs" />
+    <Compile Include="Models\DA_DEBIT_NOTE_WRITE_OFF.cs" />
+    <Compile Include="Models\EB_FORECLOSURE_EVALUATION.cs" />
+    <Compile Include="Models\EB_FORECLOSURE_EVALUATION_APPROVEMENT.cs" />
+    <Compile Include="Models\EB_FORECLOSURE_EVALUATION_ATTACHMENT.cs" />
+    <Compile Include="Models\EB_FORECLOSURE_EVALUATION_BUILDING_APPRASIAL.cs" />
+    <Compile Include="Models\EB_FORECLOSURE_EVALUATION_LAND_APPRASIAL.cs" />
+    <Compile Include="Models\EB_HOUSEHOLD_REGISTRATION_APPLICATION.cs" />
+    <Compile Include="Models\EB_HOUSEHOLD_REGISTRATION_APPLICATION_ATTACHEMENT.cs" />
+    <Compile Include="Models\EB_HOUSEHOLD_REGISTRATION_APPLICATION_INVOICE.cs" />
+    <Compile Include="Models\EB_LEGAL_ATTEST_ATTACHEMENT.cs" />
+    <Compile Include="Models\EB_LEGAL_ATTEST_INVOICE.cs" />
+    <Compile Include="Models\EB_LEGAL_ATTEST_LETTERS.cs" />
+    <Compile Include="Models\EB_LEGAL_ATTEST_LETTERS_ADDRESSEE.cs" />
+    <Compile Include="Models\EB_LEGAL_PETITION.cs" />
+    <Compile Include="Models\EB_LEGAL_PETITION_ATTACHEMENT.cs" />
+    <Compile Include="Models\EB_LEGAL_PETITION_INVOICE.cs" />
+    <Compile Include="Models\EB_LEGAL_PETITION_RESPONDENT.cs" />
+    <Compile Include="Models\EB_LEGAL_PETITION_THIRD_PARTY.cs" />
+    <Compile Include="Models\EB_SEAL_UP_APPLICATION.cs" />
+    <Compile Include="Models\EB_SEAL_UP_APPLICATION_APPROVEMENT.cs" />
+    <Compile Include="Models\EB_SEAL_UP_APPLICATION_ATTACHMENT.cs" />
+    <Compile Include="Models\EB_SEAL_UP_APPLICATION_BUILDING_APPRASIAL.cs" />
+    <Compile Include="Models\EB_SEAL_UP_APPLICATION_LAND_APPRASIAL.cs" />
+    <Compile Include="Models\EB_TAXATION_INFORMATION_APPLICATION.cs" />
+    <Compile Include="Models\EB_TAXATION_INFORMATION_APPLICATION_ATTACHEMENT.cs" />
+    <Compile Include="Models\EB_TAXATION_INFORMATION_APPLICATION_DEBTOR.cs" />
+    <Compile Include="Models\EB_TAXATION_INFORMATION_APPLICATION_INVOICE.cs" />
+    <Compile Include="Models\FA_CHEQUE.cs" />
+    <Compile Include="Models\FA_CHEQUE_COLLECTION.cs" />
+    <Compile Include="Models\FA_CHEQUE_COLLECTION_DETAIL.cs" />
+    <Compile Include="Models\FA_CHEQUE_RETURNED_PROCESS.cs" />
+    <Compile Include="Models\FA_CHEQUE_RETURNED_PROCESS_CHECK.cs" />
+    <Compile Include="Models\FA_CHEQUE_RETURNED_PROCESS_DETAIL.cs" />
+    <Compile Include="Models\FA_CHEQUE_RETURNED_PROCESS_NEWCHECK.cs" />
+    <Compile Include="Models\FA_CHEQUE_RETURNED_PROCESS_VOUCHER.cs" />
+    <Compile Include="Models\FA_CHEQUE_RETURNED_REASON.cs" />
+    <Compile Include="Models\FA_CHEQUE_WITHDRAW.cs" />
+    <Compile Include="Models\FA_CHEQUE_WITHDRAW_DETAIL.cs" />
+    <Compile Include="Models\FB_PAYMENT_INSTRUCTION.cs" />
+    <Compile Include="Models\FB_PAYMENT_INSTRUCTION_BATCH.cs" />
+    <Compile Include="Models\FB_PAYMENT_INSTRUCTION_BATCH_APPROVEMENT.cs" />
+    <Compile Include="Models\FB_PAYMENT_INSTRUCTION_BATCH_DETAIL.cs" />
+    <Compile Include="Models\FB_PAYMENT_INSTRUCTION_FAIL.cs" />
+    <Compile Include="Models\FB_PAYMENT_INSTRUCTION_FAIL_APPROVEMENT.cs" />
+    <Compile Include="Models\FB_PAYMENT_INSTRUCTION_FAIL_DETAIL.cs" />
+    <Compile Include="Models\FD_INVOICE_CONTRACT.cs" />
+    <Compile Include="Models\FD_INVOICE_CONTRACT_WRITE_OFF.cs" />
+    <Compile Include="Models\FD_INVOICE_CONTROL.cs" />
+    <Compile Include="Models\FD_INVOICE_CONTROL_PAYMENT.cs" />
+    <Compile Include="Models\FD_INVOICE_DETAIL.cs" />
+    <Compile Include="Models\FD_INVOICE_VOUCHER.cs" />
+    <Compile Include="Models\GA_INTERIM_ACCOUNT_DETAIL.cs" />
+    <Compile Include="Models\GA_VOUCHER_CONTENT.cs" />
+    <Compile Include="Models\GA_VOUCHER_CONTROL.cs" />
+    <Compile Include="Models\GA_VOUCHER_DETAIL.cs" />
+    <Compile Include="Models\IA_CUATOMER_SERVICE_APPLICATION.cs" />
+    <Compile Include="Models\IA_CUATOMER_SERVICE_APPLICATION_APPROVEMENT.cs" />
+    <Compile Include="Models\IA_CUATOMER_SERVICE_APPLICATION_ATTACHMENT.cs" />
+    <Compile Include="Models\JA_COMPANY.cs" />
+    <Compile Include="Models\JA_DATEBOOK.cs" />
+    <Compile Include="Models\JA_DEPUTY.cs" />
+    <Compile Include="Models\JA_DIVISION.cs" />
+    <Compile Include="Models\JA_DIVISION_MANAGER.cs" />
+    <Compile Include="Models\JA_EMPOLYEE.cs" />
+    <Compile Include="Models\JA_EMPOLYEE_ATTACHMENT.cs" />
+    <Compile Include="Models\JA_EMPOLYEE_LEAVE.cs" />
+    <Compile Include="Models\JA_HOLIDAY.cs" />
+    <Compile Include="Models\JA_JOB_TILE.cs" />
+    <Compile Include="Models\JA_LEAVE.cs" />
+    <Compile Include="Models\sysdiagrams.cs" />
+    <Compile Include="Models\UA_APPROVEMENT_ATTACHMENT.cs" />
+    <Compile Include="Models\UA_APPROVEMENT_CONTROL_RECORD.cs" />
+    <Compile Include="Models\UA_APPROVEMENT_DETAIL_RECORD.cs" />
+    <Compile Include="Models\UA_SCHEDULE_SIGN_SEQUENCE.cs" />
+    <Compile Include="Models\UA_SIGN_FLOW.cs" />
+    <Compile Include="Models\WA_MESSAGE.cs" />
+    <Compile Include="Models\WA_MESSAGE_ADDRESSEE.cs" />
+    <Compile Include="Models\XZ_ATTACHMENT.cs" />
+    <Compile Include="Models\XZ_BANK.cs" />
+    <Compile Include="Models\XZ_BANKBRANCH.cs" />
+    <Compile Include="Models\XZ_BLACKLIST.cs" />
+    <Compile Include="Models\XZ_BLACKLIST_LOG.cs" />
+    <Compile Include="Models\XZ_BULLETIN.cs" />
+    <Compile Include="Models\XZ_BULLETIN_ATTACHMENT.cs" />
+    <Compile Include="Models\XZ_BUSINESS.cs" />
+    <Compile Include="Models\XZ_DATA_DICTIONARY.cs" />
+    <Compile Include="Models\XZ_DATA_IDENTIFIER_MEANING.cs" />
+    <Compile Include="Models\XZ_DOCUMENT.cs" />
+    <Compile Include="Models\XZ_DOCUMENT_BY_BUSSINES.cs" />
+    <Compile Include="Models\XZ_FUND_SPEC.cs" />
+    <Compile Include="Models\XZ_SERIAL_NUMBER.cs" />
+    <Compile Include="Models\YA_FUNCTIONS.cs" />
+    <Compile Include="Models\YA_MENU.cs" />
+    <Compile Include="Models\YA_MENU_SUB.cs" />
+    <Compile Include="Models\YA_ROLES.cs" />
+    <Compile Include="Models\YA_ROLE_DIVISION.cs" />
+    <Compile Include="Models\YA_ROLE_FUNCTIONS.cs" />
+    <Compile Include="Models\YA_ROLE_USERS.cs" />
+    <Compile Include="Models\ZZ_APPLIACTION_DOCUMENT_CHECK.cs" />
+    <Compile Include="Models\ZZ_APPLIACTION_MESSAGE.cs" />
+    <Compile Include="Models\ZZ_APPLICATION.cs" />
+    <Compile Include="Models\ZZ_APPLICATION_APPROVEMENT.cs" />
+    <Compile Include="Models\ZZ_APPLICATION_ATTACHMENT.cs" />
+    <Compile Include="Models\ZZ_APPLICATION_LOANINFO.cs" />
+    <Compile Include="Models\ZZ_APPLICATION_LOANINFO_LOG.cs" />
+    <Compile Include="Models\ZZ_APPLICATION_LOG.cs" />
+    <Compile Include="Models\ZZ_BORROWER_NTOTE_CREDIT.cs" />
+    <Compile Include="Models\ZZ_BORROWER_NTOTE_CREDIT_DETAIL.cs" />
+    <Compile Include="Models\ZZ_BUILDING_OWNERSHIP_CERTIFICATE_ACCESSORY.cs" />
+    <Compile Include="Models\ZZ_BUILDING_OWNERSHIP_CERTIFICATE_APPRASIAL.cs" />
+    <Compile Include="Models\ZZ_BUILDING_OWNERSHIP_CERTIFICATE_DESCRIPTION.cs" />
+    <Compile Include="Models\ZZ_BUILDING_OWNERSHIP_CERTIFICATE_ONWER_RIGHTS.cs" />
+    <Compile Include="Models\ZZ_BUILDING_OWNERSHIP_CERTIFICATE_OTHER_RIGHTS.cs" />
+    <Compile Include="Models\ZZ_BUILDING_OWNERSHIP_CERTIFICATE_SHARESECTION.cs" />
+    <Compile Include="Models\ZZ_LAND_OWNERSHIP_CERTIFICATE_APPRASIAL.cs" />
+    <Compile Include="Models\ZZ_LAND_OWNERSHIP_CERTIFICATE_DESCRIPTION.cs" />
+    <Compile Include="Models\ZZ_LAND_OWNERSHIP_CERTIFICATE_ONWER_RIGHTS.cs" />
+    <Compile Include="Models\ZZ_LOAN_RELATED_PARTIES.cs" />
+    <Compile Include="Models\ZZ_LOAN_RELATED_PARTIES_ATTACHMENT.cs" />
+    <Compile Include="Models\ZZ_PERSONAL_CREDIT_REPORT.cs" />
+    <Compile Include="Models\ZZ_PERSONAL_CREDIT_REPORT_BADDEBT.cs" />
+    <Compile Include="Models\ZZ_PERSONAL_CREDIT_REPORT_BANKLOAN.cs" />
+    <Compile Include="Models\ZZ_PERSONAL_CREDIT_REPORT_CREDITCARD.cs" />
+    <Compile Include="Models\ZZ_PERSONAL_CREDIT_REPORT_CREDITCARD_ACCOUNT.cs" />
+    <Compile Include="Models\ZZ_PERSONAL_CREDIT_REPORT_DBR22.cs" />
+    <Compile Include="Models\ZZ_PERSONAL_CREDIT_REPORT_DBR22_CONTENT.cs" />
+    <Compile Include="Models\ZZ_PERSONAL_CREDIT_REPORT_QUERY.cs" />
+    <Compile Include="LasTWEntities.cs" />
+    <Compile Include="MoneySQEntities.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{c2027887-2e05-482a-bf26-4fe86dffaf99}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

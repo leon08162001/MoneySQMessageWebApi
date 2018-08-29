@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="234fd364749f472e8b2bf496a4f48d42" Name="Diagram1" ZoomLevel="98">
+        <EntityTypeShape EntityType="DBModels.CB_CREDIT_CHECK_LEGAL_OPINION" Width="1.5" PointX="14.75" PointY="219.25" />
+        <EntityTypeShape EntityType="DBModels.CB_CREDIT_CHECK_REPROT" Width="1.5" PointX="12.5" PointY="201.875" />
+        <EntityTypeShape EntityType="DBModels.CB_CREDIT_CHECK_REPROT_APPROVEMENT" Width="1.5" PointX="18.75" PointY="208.375" />
+        <EntityTypeShape EntityType="DBModels.CB_CREDIT_CHECK_REPROT_ATTACHMENT" Width="1.5" PointX="21.75" PointY="188.75" />
+        <EntityTypeShape EntityType="DBModels.CB_CREDIT_CHECK_SCORING" Width="1.5" PointX="14.75" PointY="214.625" />
+        <EntityTypeShape EntityType="DBModels.CB_CREDIT_RISK_RANK" Width="1.5" PointX="5.25" PointY="141.375" />
+        <EntityTypeShape EntityType="DBModels.CB_CREDIT_RISK_RANK_VSESION" Width="1.5" PointX="3" PointY="141.625" />
+        <EntityTypeShape EntityType="DBModels.CB_SCORING_CARD_ASSEMBLAGE" Width="1.5" PointX="7.5" PointY="319.5" />
+        <EntityTypeShape EntityType="DBModels.CB_SCORING_CARD_ITEM" Width="1.5" PointX="5.25" PointY="319.625" />
+        <EntityTypeShape EntityType="DBModels.CB_SCORING_CARD_LEVEL" Width="1.5" PointX="5.25" PointY="315.5" />
+        <EntityTypeShape EntityType="DBModels.CB_SCORING_CARD_VERSION" Width="1.5" PointX="3" PointY="317.375" />
+        <EntityTypeShape EntityType="DBModels.CC_APPRAISAL_BUILDING" Width="1.5" PointX="5.25" PointY="181" />
+        <EntityTypeShape EntityType="DBModels.CC_APPRAISAL_BUILDING_CONTENT" Width="1.5" PointX="7.5" PointY="183.75" />
+        <EntityTypeShape EntityType="DBModels.CC_APPRAISAL_LAND" Width="1.5" PointX="5.25" PointY="185.625" />
+        <EntityTypeShape EntityType="DBModels.CC_APPRAISAL_REPORT" Width="1.5" PointX="3" PointY="172.75" />
+        <EntityTypeShape EntityType="DBModels.CC_APPRAISAL_REPORT_APPROVEMENT" Width="1.5" PointX="5.25" PointY="176.75" />
+        <EntityTypeShape EntityType="DBModels.CC_APPRAISAL_REPORT_ATTACHMENT" Width="1.5" PointX="10.5" PointY="174.875" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACT" Width="1.5" PointX="3" PointY="284.75" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACT_AMORTIZATION_DETAILS" Width="1.5" PointX="5.25" PointY="365" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACT_AMORTIZATION_DETAILS_VOUCHER" Width="1.5" PointX="12.5" PointY="255.125" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACT_APPLICATION" Width="1.5" PointX="5.25" PointY="244.25" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACT_APPROVEMENT" Width="1.5" PointX="8.25" PointY="290.375" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACT_ATTACHMENT" Width="1.5" PointX="10.5" PointY="229.375" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACT_CHECK_ITEM" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACT_CHEQUE" Width="1.5" PointX="9.75" PointY="277.375" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACT_COLLATERAL" Width="1.5" PointX="10.5" PointY="225.25" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACT_CONTROL" Width="1.5" PointX="5.25" PointY="329.125" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACT_CUSTOMER_CONTACT_LOG" Width="1.5" PointX="5.25" PointY="354.75" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACT_HOUSEHOLD_REGISTRATION_APPLICATION" Width="1.5" PointX="5.25" PointY="286.375" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACT_INCOME" Width="1.5" PointX="7.5" PointY="229.5" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACT_INCOME_DETAIL" Width="1.5" PointX="9.75" PointY="244.875" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACT_INTERIM_ACCOUNT" Width="1.5" PointX="5.25" PointY="282.25" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACT_LEGAL_ACTION_INSTRUCTION" Width="1.5" PointX="5.25" PointY="341.25" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACT_LEGAL_ATTEST_LETTERS" Width="1.5" PointX="5.25" PointY="294.375" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACT_LEGAL_PETITION" Width="1.5" PointX="8.25" PointY="294.375" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACT_MATCHED" Width="1.5" PointX="5.25" PointY="337.375" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACT_MESSAGE" Width="1.5" PointX="8.25" PointY="286.375" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACT_PROPERTY" Width="1.5" PointX="10.5" PointY="233.5" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACT_PROPERTY_DETAIL" Width="1.5" PointX="12.75" PointY="232.25" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACT_REPAYMENT_DETAILS" Width="1.5" PointX="5.25" PointY="359.125" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACT_REPAYMENT_DETAILS_VOUCHER" Width="1.5" PointX="7.5" PointY="253.5" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACT_TAXATION_INFORMATION_APPLICATION" Width="1.5" PointX="5.25" PointY="290.375" />
+        <EntityTypeShape EntityType="DBModels.DA_CONTRACTOR" Width="1.5" PointX="5.25" PointY="349.5" />
+        <EntityTypeShape EntityType="DBModels.DA_DEBIT_NOTE_CONTROL" Width="1.5" PointX="5.25" PointY="306" />
+        <EntityTypeShape EntityType="DBModels.DA_DEBIT_NOTE_DETAIL" Width="1.5" PointX="7.5" PointY="311" />
+        <EntityTypeShape EntityType="DBModels.DA_DEBIT_NOTE_WRITE_OFF" Width="1.5" PointX="13.5" PointY="227.125" />
+        <EntityTypeShape EntityType="DBModels.EB_FORECLOSURE_EVALUATION" Width="1.5" PointX="5.25" PointY="127.125" />
+        <EntityTypeShape EntityType="DBModels.EB_FORECLOSURE_EVALUATION_APPROVEMENT" Width="1.5" PointX="7.5" PointY="121.75" />
+        <EntityTypeShape EntityType="DBModels.EB_FORECLOSURE_EVALUATION_ATTACHMENT" Width="1.5" PointX="7.5" PointY="162.875" />
+        <EntityTypeShape EntityType="DBModels.EB_FORECLOSURE_EVALUATION_BUILDING_APPRASIAL" Width="1.5" PointX="13.5" PointY="176.75" />
+        <EntityTypeShape EntityType="DBModels.EB_FORECLOSURE_EVALUATION_LAND_APPRASIAL" Width="1.5" PointX="13.5" PointY="194.75" />
+        <EntityTypeShape EntityType="DBModels.EB_HOUSEHOLD_REGISTRATION_APPLICATION" Width="1.5" PointX="5.25" PointY="118.75" />
+        <EntityTypeShape EntityType="DBModels.EB_HOUSEHOLD_REGISTRATION_APPLICATION_ATTACHEMENT" Width="1.5" PointX="7.5" PointY="166.875" />
+        <EntityTypeShape EntityType="DBModels.EB_HOUSEHOLD_REGISTRATION_APPLICATION_INVOICE" Width="1.5" PointX="11.25" PointY="128" />
+        <EntityTypeShape EntityType="DBModels.EB_LEGAL_ATTEST_ATTACHEMENT" Width="1.5" PointX="10.5" PointY="166.875" />
+        <EntityTypeShape EntityType="DBModels.EB_LEGAL_ATTEST_INVOICE" Width="1.5" PointX="10.5" PointY="137.875" />
+        <EntityTypeShape EntityType="DBModels.EB_LEGAL_ATTEST_LETTERS" Width="1.5" PointX="8.25" PointY="135.125" />
+        <EntityTypeShape EntityType="DBModels.EB_LEGAL_ATTEST_LETTERS_ADDRESSEE" Width="1.5" PointX="10.5" PointY="118.75" />
+        <EntityTypeShape EntityType="DBModels.EB_LEGAL_PETITION" Width="1.5" PointX="8.25" PointY="140.875" />
+        <EntityTypeShape EntityType="DBModels.EB_LEGAL_PETITION_ATTACHEMENT" Width="1.5" PointX="10.5" PointY="162.875" />
+        <EntityTypeShape EntityType="DBModels.EB_LEGAL_PETITION_INVOICE" Width="1.5" PointX="10.5" PointY="146" />
+        <EntityTypeShape EntityType="DBModels.EB_LEGAL_PETITION_RESPONDENT" Width="1.5" PointX="10.5" PointY="123.375" />
+        <EntityTypeShape EntityType="DBModels.EB_LEGAL_PETITION_THIRD_PARTY" Width="1.5" PointX="10.5" PointY="141.875" />
+        <EntityTypeShape EntityType="DBModels.EB_SEAL_UP_APPLICATION" Width="1.5" PointX="14.25" PointY="162.375" />
+        <EntityTypeShape EntityType="DBModels.EB_SEAL_UP_APPLICATION_APPROVEMENT" Width="1.5" PointX="16.5" PointY="138.625" />
+        <EntityTypeShape EntityType="DBModels.EB_SEAL_UP_APPLICATION_ATTACHMENT" Width="1.5" PointX="16.5" PointY="163.5" />
+        <EntityTypeShape EntityType="DBModels.EB_SEAL_UP_APPLICATION_BUILDING_APPRASIAL" Width="1.5" PointX="16.5" PointY="177.75" />
+        <EntityTypeShape EntityType="DBModels.EB_SEAL_UP_APPLICATION_LAND_APPRASIAL" Width="1.5" PointX="16.5" PointY="192.75" />
+        <EntityTypeShape EntityType="DBModels.EB_TAXATION_INFORMATION_APPLICATION" Width="1.5" PointX="8.25" PointY="128.75" />
+        <EntityTypeShape EntityType="DBModels.EB_TAXATION_INFORMATION_APPLICATION_ATTACHEMENT" Width="1.5" PointX="10.5" PointY="170.875" />
+        <EntityTypeShape EntityType="DBModels.EB_TAXATION_INFORMATION_APPLICATION_DEBTOR" Width="1.5" PointX="10.5" PointY="133.25" />
+        <EntityTypeShape EntityType="DBModels.EB_TAXATION_INFORMATION_APPLICATION_INVOICE" Width="1.5" PointX="13.5" PointY="133" />
+        <EntityTypeShape EntityType="DBModels.FA_CHEQUE" Width="1.5" PointX="7.5" PointY="259.375" />
+        <EntityTypeShape EntityType="DBModels.FA_CHEQUE_COLLECTION" Width="1.5" PointX="5.25" PointY="158.375" />
+        <EntityTypeShape EntityType="DBModels.FA_CHEQUE_COLLECTION_DETAIL" Width="1.5" PointX="9.75" PointY="210" />
+        <EntityTypeShape EntityType="DBModels.FA_CHEQUE_RETURNED_PROCESS" Width="1.5" PointX="3" PointY="154.25" />
+        <EntityTypeShape EntityType="DBModels.FA_CHEQUE_RETURNED_PROCESS_CHECK" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="DBModels.FA_CHEQUE_RETURNED_PROCESS_DETAIL" Width="1.5" PointX="9.75" PointY="260.625" />
+        <EntityTypeShape EntityType="DBModels.FA_CHEQUE_RETURNED_PROCESS_NEWCHECK" Width="1.5" PointX="9.75" PointY="255.625" />
+        <EntityTypeShape EntityType="DBModels.FA_CHEQUE_RETURNED_PROCESS_VOUCHER" Width="1.5" PointX="5.25" PointY="148.875" />
+        <EntityTypeShape EntityType="DBModels.FA_CHEQUE_RETURNED_REASON" Width="1.5" PointX="2.75" PointY="5.75" />
+        <EntityTypeShape EntityType="DBModels.FA_CHEQUE_WITHDRAW" Width="1.5" PointX="10.5" PointY="264.75" />
+        <EntityTypeShape EntityType="DBModels.FA_CHEQUE_WITHDRAW_DETAIL" Width="1.5" PointX="12.75" PointY="260.5" />
+        <EntityTypeShape EntityType="DBModels.FD_INVOICE_CONTROL" Width="1.5" PointX="6" PointY="134.5" />
+        <EntityTypeShape EntityType="DBModels.FD_INVOICE_DETAIL" Width="1.5" PointX="8.25" PointY="116.5" />
+        <EntityTypeShape EntityType="DBModels.FD_INVOICE_VOUCHER" Width="1.5" PointX="8.25" PointY="148.875" />
+        <EntityTypeShape EntityType="DBModels.GA_INTERIM_ACCOUNT_DETAIL" Width="1.5" PointX="3" PointY="280.5" />
+        <EntityTypeShape EntityType="DBModels.GA_VOUCHER_CONTENT" Width="1.5" PointX="5.25" PointY="153.125" />
+        <EntityTypeShape EntityType="DBModels.GA_VOUCHER_CONTROL" Width="1.5" PointX="3" PointY="147.25" />
+        <EntityTypeShape EntityType="DBModels.GA_VOUCHER_DETAIL" Width="1.5" PointX="7.5" PointY="223.5" />
+        <EntityTypeShape EntityType="DBModels.IA_CUATOMER_SERVICE_APPLICATION" Width="1.5" PointX="5.25" PointY="369.5" />
+        <EntityTypeShape EntityType="DBModels.IA_CUATOMER_SERVICE_APPLICATION_APPROVEMENT" Width="1.5" PointX="7.5" PointY="371.875" />
+        <EntityTypeShape EntityType="DBModels.IA_CUATOMER_SERVICE_APPLICATION_ATTACHMENT" Width="1.5" PointX="7.5" PointY="269.5" />
+        <EntityTypeShape EntityType="DBModels.JA_COMPANY" Width="1.5" PointX="0.75" PointY="214" />
+        <EntityTypeShape EntityType="DBModels.JA_DATEBOOK" Width="1.5" PointX="5.25" PointY="345.125" />
+        <EntityTypeShape EntityType="DBModels.JA_DEPUTY" Width="1.5" PointX="5.75" PointY="4.75" />
+        <EntityTypeShape EntityType="DBModels.JA_DIVISION" Width="1.5" PointX="3" PointY="300.5" />
+        <EntityTypeShape EntityType="DBModels.JA_EMPOLYEE" Width="1.5" PointX="5.25" PointY="266.375" />
+        <EntityTypeShape EntityType="DBModels.JA_EMPOLYEE_ATTACHMENT" Width="1.5" PointX="7.5" PointY="188.625" />
+        <EntityTypeShape EntityType="DBModels.JA_EMPOLYEE_LEAVE" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="DBModels.JA_HOLIDAY" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DBModels.JA_JOB_TILE" Width="1.5" PointX="3" PointY="322.25" />
+        <EntityTypeShape EntityType="DBModels.JA_LEAVE" Width="1.5" PointX="0.75" PointY="1.25" />
+        <EntityTypeShape EntityType="DBModels.UA_APPROVEMENT_ATTACHMENT" Width="1.5" PointX="7.5" PointY="170.875" />
+        <EntityTypeShape EntityType="DBModels.UA_APPROVEMENT_CONTROL_RECORD" Width="1.5" PointX="5.25" PointY="112.75" />
+        <EntityTypeShape EntityType="DBModels.UA_APPROVEMENT_DETAIL_RECORD" Width="1.5" PointX="6" PointY="214.5" />
+        <EntityTypeShape EntityType="DBModels.UA_SCHEDULE_SIGN_SEQUENCE" Width="1.5" PointX="8.25" PointY="305.625" />
+        <EntityTypeShape EntityType="DBModels.UA_SIGN_FLOW" Width="1.5" PointX="3" PointY="313.5" />
+        <EntityTypeShape EntityType="DBModels.WA_MESSAGE" Width="1.5" PointX="8" PointY="235.125" />
+        <EntityTypeShape EntityType="DBModels.WA_MESSAGE_ADDRESSEE" Width="1.5" PointX="10.25" PointY="251.5" />
+        <EntityTypeShape EntityType="DBModels.XZ_ATTACHMENT" Width="1.5" PointX="5.25" PointY="164.75" />
+        <EntityTypeShape EntityType="DBModels.XZ_BANK" Width="1.5" PointX="1.5" PointY="189" />
+        <EntityTypeShape EntityType="DBModels.XZ_BANKBRANCH" Width="1.5" PointX="0.75" PointY="209.5" />
+        <EntityTypeShape EntityType="DBModels.XZ_BLACKLIST" Width="1.5" PointX="3" PointY="230.25" />
+        <EntityTypeShape EntityType="DBModels.XZ_BLACKLIST_LOG" Width="1.5" PointX="7.75" PointY="4.75" />
+        <EntityTypeShape EntityType="DBModels.XZ_BULLETIN" Width="1.5" PointX="3" PointY="234.375" />
+        <EntityTypeShape EntityType="DBModels.XZ_BULLETIN_ATTACHMENT" Width="1.5" PointX="15.5" PointY="200.125" />
+        <EntityTypeShape EntityType="DBModels.XZ_BUSINESS" Width="1.5" PointX="3" PointY="304.875" />
+        <EntityTypeShape EntityType="DBModels.XZ_DATA_DICTIONARY" Width="1.5" PointX="3" PointY="226.25" />
+        <EntityTypeShape EntityType="DBModels.XZ_DATA_IDENTIFIER_MEANING" Width="1.5" PointX="5.25" PointY="226.125" />
+        <EntityTypeShape EntityType="DBModels.XZ_DOCUMENT" Width="1.5" PointX="3" PointY="166.5" />
+        <EntityTypeShape EntityType="DBModels.XZ_DOCUMENT_BY_BUSSINES" Width="1.5" PointX="5.25" PointY="235.75" />
+        <EntityTypeShape EntityType="DBModels.XZ_FUND_SPEC" Width="1.5" PointX="3" PointY="215.375" />
+        <EntityTypeShape EntityType="DBModels.XZ_SERIAL_NUMBER" Width="1.5" PointX="3" PointY="222.75" />
+        <EntityTypeShape EntityType="DBModels.YA_FUNCTIONS" Width="1.5" PointX="8" PointY="315.5" />
+        <EntityTypeShape EntityType="DBModels.YA_MENU" Width="1.5" PointX="3" PointY="309.375" />
+        <EntityTypeShape EntityType="DBModels.YA_MENU_SUB" Width="1.5" PointX="10.25" PointY="310.125" />
+        <EntityTypeShape EntityType="DBModels.YA_ROLE_DIVISION" Width="1.5" PointX="5.25" PointY="300.625" />
+        <EntityTypeShape EntityType="DBModels.YA_ROLE_FUNCTIONS" Width="1.5" PointX="11.25" PointY="295.375" />
+        <EntityTypeShape EntityType="DBModels.YA_ROLE_USERS" Width="1.5" PointX="5.25" PointY="275.875" />
+        <EntityTypeShape EntityType="DBModels.YA_ROLES" Width="1.5" PointX="3" PointY="275.5" />
+        <EntityTypeShape EntityType="DBModels.ZZ_APPLIACTION_DOCUMENT_CHECK" Width="1.5" PointX="10.5" PointY="192.375" />
+        <EntityTypeShape EntityType="DBModels.ZZ_APPLIACTION_MESSAGE" Width="1.5" PointX="10.25" PointY="199.625" />
+        <EntityTypeShape EntityType="DBModels.ZZ_APPLICATION" Width="1.5" PointX="3" PointY="192.5" />
+        <EntityTypeShape EntityType="DBModels.ZZ_APPLICATION_APPROVEMENT" Width="1.5" PointX="5.25" PointY="195.625" />
+        <EntityTypeShape EntityType="DBModels.ZZ_APPLICATION_ATTACHMENT" Width="1.5" PointX="10.5" PointY="183.75" />
+        <EntityTypeShape EntityType="DBModels.ZZ_APPLICATION_LOANINFO" Width="1.5" PointX="5.25" PointY="199.25" />
+        <EntityTypeShape EntityType="DBModels.ZZ_APPLICATION_LOANINFO_LOG" Width="1.5" PointX="4.75" PointY="8.75" />
+        <EntityTypeShape EntityType="DBModels.ZZ_APPLICATION_LOG" Width="1.5" PointX="6.75" PointY="8.75" />
+        <EntityTypeShape EntityType="DBModels.ZZ_BORROWER_NTOTE_CREDIT" Width="1.5" PointX="7.5" PointY="177.75" />
+        <EntityTypeShape EntityType="DBModels.ZZ_BORROWER_NTOTE_CREDIT_DETAIL" Width="1.5" PointX="9.75" PointY="157.375" />
+        <EntityTypeShape EntityType="DBModels.ZZ_BUILDING_OWNERSHIP_CERTIFICATE_ACCESSORY" Width="1.5" PointX="15.75" PointY="210" />
+        <EntityTypeShape EntityType="DBModels.ZZ_BUILDING_OWNERSHIP_CERTIFICATE_APPRASIAL" Width="1.5" PointX="18.75" PointY="184.5" />
+        <EntityTypeShape EntityType="DBModels.ZZ_BUILDING_OWNERSHIP_CERTIFICATE_DESCRIPTION" Width="1.5" PointX="13.5" PointY="181.625" />
+        <EntityTypeShape EntityType="DBModels.ZZ_BUILDING_OWNERSHIP_CERTIFICATE_ONWER_RIGHTS" Width="1.5" PointX="15.75" PointY="204.25" />
+        <EntityTypeShape EntityType="DBModels.ZZ_BUILDING_OWNERSHIP_CERTIFICATE_OTHER_RIGHTS" Width="1.5" PointX="15.75" PointY="168.625" />
+        <EntityTypeShape EntityType="DBModels.ZZ_BUILDING_OWNERSHIP_CERTIFICATE_SHARESECTION" Width="1.5" PointX="11.25" PointY="152.5" />
+        <EntityTypeShape EntityType="DBModels.ZZ_LAND_OWNERSHIP_CERTIFICATE_APPRASIAL" Width="1.5" PointX="18.75" PointY="188.75" />
+        <EntityTypeShape EntityType="DBModels.ZZ_LAND_OWNERSHIP_CERTIFICATE_DESCRIPTION" Width="1.5" PointX="16.5" PointY="183.375" />
+        <EntityTypeShape EntityType="DBModels.ZZ_LAND_OWNERSHIP_CERTIFICATE_ONWER_RIGHTS" Width="1.5" PointX="18.75" PointY="193.625" />
+        <EntityTypeShape EntityType="DBModels.ZZ_LAND_OWNERSHIP_CERTIFICATE_OTHER_RIGHTS" Width="1.5" PointX="18.75" PointY="175" />
+        <EntityTypeShape EntityType="DBModels.ZZ_LOAN_RELATED_PARTIES" Width="1.5" PointX="7.5" PointY="198.875" />
+        <EntityTypeShape EntityType="DBModels.ZZ_LOAN_RELATED_PARTIES_ATTACHMENT" Width="1.5" PointX="9.75" PointY="180" />
+        <EntityTypeShape EntityType="DBModels.ZZ_PERSONAL_CREDIT_REPORT" Width="1.5" PointX="7.5" PointY="191.875" />
+        <EntityTypeShape EntityType="DBModels.ZZ_PERSONAL_CREDIT_REPORT_BADDEBT" Width="1.5" PointX="9.75" PointY="239.75" />
+        <EntityTypeShape EntityType="DBModels.ZZ_PERSONAL_CREDIT_REPORT_BANKLOAN" Width="1.5" PointX="9.75" PointY="204" />
+        <EntityTypeShape EntityType="DBModels.ZZ_PERSONAL_CREDIT_REPORT_CREDITCARD" Width="1.5" PointX="9.75" PointY="220" />
+        <EntityTypeShape EntityType="DBModels.ZZ_PERSONAL_CREDIT_REPORT_CREDITCARD_ACCOUNT" Width="1.5" PointX="9.75" PointY="214.375" />
+        <EntityTypeShape EntityType="DBModels.ZZ_PERSONAL_CREDIT_REPORT_DBR22" Width="1.5" PointX="10.5" PointY="187.375" />
+        <EntityTypeShape EntityType="DBModels.ZZ_PERSONAL_CREDIT_REPORT_DBR22_CONTENT" Width="1.5" PointX="12.75" PointY="171.5" />
+        <EntityTypeShape EntityType="DBModels.ZZ_PERSONAL_CREDIT_REPORT_QUERY" Width="1.5" PointX="8.75" PointY="8.75" />
+        <AssociationConnector Association="DBModels.FK_CB_CREDIT_CHECK_LEGAL_OPINION_CB_CREDIT_CHECK_REPROT" />
+        <AssociationConnector Association="DBModels.FK_CB_CREDIT_CHECK_REPROT_APPROVEMENT_CB_CREDIT_CHECK_REPROT" />
+        <AssociationConnector Association="DBModels.FK_CB_CREDIT_CHECK_REPROT_ATTACHMENT_CB_CREDIT_CHECK_REPROT" />
+        <AssociationConnector Association="DBModels.FK_CB_CREDIT_CHECK_REPROT_JA_COMPANY" />
+        <AssociationConnector Association="DBModels.FK_ZZ_APPLIACTION_CREDIT_CHECK_REPROT_ZZ_APPLICATION_LOANINFO" />
+        <AssociationConnector Association="DBModels.FK_ZZ_APPLIACTION_CREDIT_CHECK_SCORING_ZZ_APPLIACTION_CREDIT_CHECK_REPROT" />
+        <AssociationConnector Association="DBModels.FK_CB_CREDIT_CHECK_REPROT_APPROVEMENT_UA_APPROVEMENT_CONTROL_RECORD" />
+        <AssociationConnector Association="DBModels.FK_CB_CREDIT_CHECK_REPROT_ATTACHMENT_XZ_ATTACHMENT" />
+        <AssociationConnector Association="DBModels.FK_CB_CREDIT_RISK_RANK_CB_CREDIT_RISK_RANK_VSESION" />
+        <AssociationConnector Association="DBModels.FK_CB_CREDIT_RISK_RANK_VSESION_JA_COMPANY" />
+        <AssociationConnector Association="DBModels.FK_CB_SCORING_CARD_ASSEMBLAGE_CB_SCORING_CARD_ITEM" />
+        <AssociationConnector Association="DBModels.FK_CB_SCORING_CARD_ITEM_CB_SCORING_CARD_VERSION" />
+        <AssociationConnector Association="DBModels.FK_CB_SCORING_CARD_LEVEL_CB_SCORING_CARD_VERSION" />
+        <AssociationConnector Association="DBModels.FK_CB_SCORING_CARD_VERSION_JA_COMPANY" />
+        <AssociationConnector Association="DBModels.FK_CC_APPRAISAL_BUILDING_CC_APPRAISAL_REPORT" />
+        <AssociationConnector Association="DBModels.FK_CC_APPRAISAL_BUILDING_CONTENT_CC_APPRAISAL_BUILDING" />
+        <AssociationConnector Association="DBModels.FK_EB_FORECLOSURE_EVALUATION_BUILDING_APPRASIAL_CC_APPRAISAL_BUILDING" />
+        <AssociationConnector Association="DBModels.FK_EB_SEAL_UP_APPLICATION_BUILDING_APPRASIAL_CC_APPRAISAL_BUILDING" />
+        <AssociationConnector Association="DBModels.FK_ZZ_BUILDING_OWNERSHIP_CERTIFICATE_APPRASIAL_CC_APPRAISAL_BUILDING" />
+        <AssociationConnector Association="DBModels.FK_CC_APPRAISAL_LAND_CC_APPRAISAL_REPORT" />
+        <AssociationConnector Association="DBModels.FK_EB_FORECLOSURE_EVALUATION_LAND_APPRASIAL_CC_APPRAISAL_LAND" />
+        <AssociationConnector Association="DBModels.FK_EB_SEAL_UP_APPLICATION_LAND_APPRASIAL_CC_APPRAISAL_LAND" />
+        <AssociationConnector Association="DBModels.FK_ZZ_LAND_OWNERSHIP_CERTIFICATE_APPRASIAL_CC_APPRAISAL_LAND" />
+        <AssociationConnector Association="DBModels.FK_CC_APPRAISAL_REPORT_APPROVEMENT_CC_APPRAISAL_REPORT" />
+        <AssociationConnector Association="DBModels.FK_CC_APPRAISAL_REPORT_ATTACHMENT_CC_APPRAISAL_REPORT" />
+        <AssociationConnector Association="DBModels.FK_CC_APPRAISAL_REPORT_JA_COMPANY" />
+        <AssociationConnector Association="DBModels.FK_CC_APPRAISAL_REPORT_APPROVEMENT_UA_APPROVEMENT_CONTROL_RECORD" />
+        <AssociationConnector Association="DBModels.FK_CC_APPRAISAL_REPORT_ATTACHMENT_XZ_ATTACHMENT" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_AMORTIZATION_DETAILS_DA_CONTRACT" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_APPLICATION_DA_CONTRACT" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_APPROVEMENT_DA_CONTRACT" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_ATTACHMENT_DA_CONTRACT" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_CHEQUE_DA_CONTRACT" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_COLLATERAL_DA_CONTRACT" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_CONTROL_DA_CONTRACT" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_CUSTOMER_CONTACT_LOG_DA_CONTRACT" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_HOUSEHOLD_REGISTRATION_APPLICATION_DA_CONTRACT" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_INCOME_DA_CONTRACT" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_INTERIM_ACCOUNT_DA_CONTRACT" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_JA_COMPANY" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_LEGAL_ACTION_INSTRUCTION_DA_CONTRACT" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_LEGAL_ATTEST_LETTERS_DA_CONTRACT" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_LEGAL_PETITION_DA_CONTRACT" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_MATCHED_DA_CONTRACT" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_MESSAGE_DA_CONTRACT" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_PROPERTY_DA_CONTRACT" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_REPAYMENT_DETAILS_DA_CONTRACT" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_TAXATION_INFORMATION_APPLICATION_DA_CONTRACT" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACTOR_DA_CONTRACT" />
+        <AssociationConnector Association="DBModels.FK_DA_DEBIT_NOTE_CONTROL_DA_CONTRACT" />
+        <AssociationConnector Association="DBModels.FK_GA_VOUCHER_DETAIL_DA_CONTRACT" />
+        <AssociationConnector Association="DBModels.FK_IA_CUATOMER_SERVICE_APPLICATION_DA_CONTRACT" />
+        <AssociationConnector Association="DBModels.FK_JA_DATEBOOK_DA_CONTRACT" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_AMORTIZATION_DETAILS_VOUCHER_DA_CONTRACT_AMORTIZATION_DETAILS" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_AMORTIZATION_DETAILS_VOUCHER_GA_VOUCHER_CONTROL" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_APPLICATION_ZZ_APPLICATION" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_APPROVEMENT_UA_APPROVEMENT_CONTROL_RECORD" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_ATTACHMENT_XZ_ATTACHMENT" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_CHEQUE_FA_CHEQUE" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_COLLATERAL_XZ_ATTACHMENT" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_HOUSEHOLD_REGISTRATION_APPLICATION_EB_HOUSEHOLD_REGISTRATION_APPLICATION" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_INCOME_DETAIL_DA_CONTRACT_INCOME" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_INCOME_EB_TAXATION_INFORMATION_APPLICATION" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_INCOME_XZ_ATTACHMENT" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_INTERIM_ACCOUNT_GA_INTERIM_ACCOUNT_DETAIL" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_LEGAL_ATTEST_LETTERS_EB_LEGAL_ATTEST_LETTERS" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_LEGAL_PETITION_EB_LEGAL_ATTEST_LETTERS" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_MESSAGE_WA_MESSAGE" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_PROPERTY_DETAIL_DA_CONTRACT_PROPERTY" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_PROPERTY_EB_TAXATION_INFORMATION_APPLICATION" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_PROPERTY_XZ_ATTACHMENT" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_REPAYMENT_DETAILS_VOUCHER_DA_CONTRACT_REPAYMENT_DETAILS" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_REPAYMENT_DETAILS_VOUCHER_GA_VOUCHER_CONTROL" />
+        <AssociationConnector Association="DBModels.FK_DA_CONTRACT_TAXATION_INFORMATION_APPLICATION_EB_TAXATION_INFORMATION_APPLICATION" />
+        <AssociationConnector Association="DBModels.FK_DA_DEBIT_NOTE_DETAIL_DA_DEBIT_NOTE_CONTROL" />
+        <AssociationConnector Association="DBModels.FK_DA_DEBIT_NOTE_WRITE_OFF_DA_DEBIT_NOTE_CONTROL" />
+        <AssociationConnector Association="DBModels.FK_DA_DEBIT_NOTE_WRITE_OFF_GA_VOUCHER_CONTROL" />
+        <AssociationConnector Association="DBModels.FK_EB_FORECLOSURE_EVALUATION_APPROVEMENT_EB_FORECLOSURE_EVALUATION" />
+        <AssociationConnector Association="DBModels.FK_EB_FORECLOSURE_EVALUATION_ATTACHMENT_EB_FORECLOSURE_EVALUATION" />
+        <AssociationConnector Association="DBModels.FK_EB_FORECLOSURE_EVALUATION_BUILDING_APPRASIAL_EB_FORECLOSURE_EVALUATION" />
+        <AssociationConnector Association="DBModels.FK_EB_FORECLOSURE_EVALUATION_LAND_APPRASIAL_EB_FORECLOSURE_EVALUATION" />
+        <AssociationConnector Association="DBModels.FK_EB_FORECLOSURE_EVALUATION_APPROVEMENT_UA_APPROVEMENT_CONTROL_RECORD" />
+        <AssociationConnector Association="DBModels.FK_EB_FORECLOSURE_EVALUATION_ATTACHMENT_XZ_ATTACHMENT" />
+        <AssociationConnector Association="DBModels.FK_EB_HOUSEHOLD_REGISTRATION_APPLICATION_ATTACHEMENT_EB_HOUSEHOLD_REGISTRATION_APPLICATION" />
+        <AssociationConnector Association="DBModels.FK_EB_HOUSEHOLD_REGISTRATION_APPLICATION_INVOICE_EB_HOUSEHOLD_REGISTRATION_APPLICATION" />
+        <AssociationConnector Association="DBModels.FK_EB_HOUSEHOLD_REGISTRATION_APPLICATION_ATTACHEMENT_XZ_ATTACHMENT" />
+        <AssociationConnector Association="DBModels.FK_EB_HOUSEHOLD_REGISTRATION_APPLICATION_INVOICE_FD_INVOICE_CONTROL" />
+        <AssociationConnector Association="DBModels.FK_EB_LEGAL_ATTEST_ATTACHEMENT_EB_LEGAL_ATTEST_LETTERS" />
+        <AssociationConnector Association="DBModels.FK_EB_LEGAL_ATTEST_ATTACHEMENT_XZ_ATTACHMENT" />
+        <AssociationConnector Association="DBModels.FK_EB_LEGAL_ATTEST_INVOICE_EB_LEGAL_ATTEST_LETTERS" />
+        <AssociationConnector Association="DBModels.FK_EB_LEGAL_ATTEST_INVOICE_FD_INVOICE_CONTROL" />
+        <AssociationConnector Association="DBModels.FK_EB_LEGAL_ATTEST_LETTERS_ADDRESSEE_EB_LEGAL_ATTEST_LETTERS" />
+        <AssociationConnector Association="DBModels.FK_EB_LEGAL_PETITION_ATTACHEMENT_EB_LEGAL_PETITION" />
+        <AssociationConnector Association="DBModels.FK_EB_LEGAL_PETITION_INVOICE_EB_LEGAL_PETITION" />
+        <AssociationConnector Association="DBModels.FK_EB_LEGAL_PETITION_RESPONDENT_EB_LEGAL_PETITION" />
+        <AssociationConnector Association="DBModels.FK_EB_LEGAL_PETITION_THIRD_PARTY_EB_LEGAL_PETITION" />
+        <AssociationConnector Association="DBModels.FK_EB_LEGAL_PETITION_ATTACHEMENT_XZ_ATTACHMENT" />
+        <AssociationConnector Association="DBModels.FK_EB_SEAL_UP_APPLICATION_APPROVEMENT_EB_SEAL_UP_APPLICATION" />
+        <AssociationConnector Association="DBModels.FK_EB_SEAL_UP_APPLICATION_ATTACHMENT_EB_SEAL_UP_APPLICATION" />
+        <AssociationConnector Association="DBModels.FK_EB_SEAL_UP_APPLICATION_BUILDING_APPRASIAL_EB_SEAL_UP_APPLICATION" />
+        <AssociationConnector Association="DBModels.FK_EB_SEAL_UP_APPLICATION_LAND_APPRASIAL_EB_SEAL_UP_APPLICATION" />
+        <AssociationConnector Association="DBModels.FK_EB_SEAL_UP_APPLICATION_APPROVEMENT_UA_APPROVEMENT_CONTROL_RECORD" />
+        <AssociationConnector Association="DBModels.FK_EB_TAXATION_INFORMATION_APPLICATION_ATTACHEMENT_EB_TAXATION_INFORMATION_APPLICATION" />
+        <AssociationConnector Association="DBModels.FK_EB_TAXATION_INFORMATION_APPLICATION_DEBTOR_EB_TAXATION_INFORMATION_APPLICATION" />
+        <AssociationConnector Association="DBModels.FK_EB_TAXATION_INFORMATION_APPLICATION_INVOICE_EB_TAXATION_INFORMATION_APPLICATION" />
+        <AssociationConnector Association="DBModels.FK_EB_TAXATION_INFORMATION_APPLICATION_ATTACHEMENT_XZ_ATTACHMENT" />
+        <AssociationConnector Association="DBModels.FK_EB_TAXATION_INFORMATION_APPLICATION_INVOICE_FD_INVOICE_CONTROL" />
+        <AssociationConnector Association="DBModels.FK_FA_CHEQUE_COLLECTION_DETAIL_FA_CHEQUE" />
+        <AssociationConnector Association="DBModels.FK_FA_CHEQUE_RETURNED_PROCESS_DETAIL_FA_CHEQUE" />
+        <AssociationConnector Association="DBModels.FK_FA_CHEQUE_RETURNED_PROCESS_NEWCHECK_FA_CHEQUE" />
+        <AssociationConnector Association="DBModels.FK_FA_CHEQUE_WITHDRAW_DETAIL_FA_CHEQUE" />
+        <AssociationConnector Association="DBModels.FK_FA_CHEQUE_XZ_ATTACHMENT" />
+        <AssociationConnector Association="DBModels.FK_FA_CHEQUE_COLLECTION_DETAIL_FA_CHEQUE_COLLECTION" />
+        <AssociationConnector Association="DBModels.FK_FA_CHEQUE_COLLECTION_GA_VOUCHER_CONTROL" />
+        <AssociationConnector Association="DBModels.FK_FA_CHEQUE_RETURNED_PROCESS_DETAIL_FA_CHEQUE_RETURNED_PROCESS" />
+        <AssociationConnector Association="DBModels.FK_FA_CHEQUE_RETURNED_PROCESS_NEWCHECK_FA_CHEQUE_RETURNED_PROCESS" />
+        <AssociationConnector Association="DBModels.FK_FA_CHEQUE_RETURNED_PROCESS_VOUCHER_FA_CHEQUE_RETURNED_PROCESS" />
+        <AssociationConnector Association="DBModels.FK_FA_CHEQUE_RETURNED_PROCESS_VOUCHER_GA_VOUCHER_CONTROL" />
+        <AssociationConnector Association="DBModels.FK_FA_CHEQUE_WITHDRAW_DETAIL_FA_CHEQUE_WITHDRAW" />
+        <AssociationConnector Association="DBModels.FK_FD_INVOICE_DETAIL_FD_INVOICE_CONTROL" />
+        <AssociationConnector Association="DBModels.FK_FD_INVOICE_VOUCHER_FD_INVOICE_CONTROL" />
+        <AssociationConnector Association="DBModels.FK_FD_INVOICE_VOUCHER_GA_VOUCHER_CONTROL" />
+        <AssociationConnector Association="DBModels.FK_GA_INTERIM_ACCOUNT_DETAIL_JA_COMPANY" />
+        <AssociationConnector Association="DBModels.FK_GA_VOUCHER_CONTENT_GA_VOUCHER_CONTROL" />
+        <AssociationConnector Association="DBModels.FK_GA_VOUCHER_DETAIL_GA_VOUCHER_CONTENT" />
+        <AssociationConnector Association="DBModels.FK_GA_VOUCHER_CONTROL_JA_COMPANY" />
+        <AssociationConnector Association="DBModels.FK_IA_CUATOMER_SERVICE_APPLICATION_APPROVEMENT_IA_CUATOMER_SERVICE_APPLICATION" />
+        <AssociationConnector Association="DBModels.FK_IA_CUATOMER_SERVICE_APPLICATION_ATTACHMENT_IA_CUATOMER_SERVICE_APPLICATION" />
+        <AssociationConnector Association="DBModels.FK_IA_CUATOMER_SERVICE_APPLICATION_APPROVEMENT_UA_APPROVEMENT_CONTROL_RECORD" />
+        <AssociationConnector Association="DBModels.FK_IA_CUATOMER_SERVICE_APPLICATION_ATTACHMENT_XZ_ATTACHMENT" />
+        <AssociationConnector Association="DBModels.FK_JA_DIVISION_JA_COMPANY" />
+        <AssociationConnector Association="DBModels.FK_JA_EMPOLYEE_JA_COMPANY" />
+        <AssociationConnector Association="DBModels.FK_JA_JOB_TILE_JA_COMPANY" />
+        <AssociationConnector Association="DBModels.FK_UA_APPROVEMENT_DETAIL_RECORD_JA_COMPANY" />
+        <AssociationConnector Association="DBModels.FK_UA_SIGN_FLOW_JA_COMPANY" />
+        <AssociationConnector Association="DBModels.FK_XZ_BLACKLIST_JA_COMPANY" />
+        <AssociationConnector Association="DBModels.FK_XZ_BULLETIN_JA_COMPANY" />
+        <AssociationConnector Association="DBModels.FK_XZ_BUSINESS_JA_COMPANY" />
+        <AssociationConnector Association="DBModels.FK_XZ_DATA_DICTIONARY_JA_COMPANY" />
+        <AssociationConnector Association="DBModels.FK_XZ_DOCUMENT_JA_COMPANY" />
+        <AssociationConnector Association="DBModels.FK_XZ_FUND_SPEC_JA_COMPANY" />
+        <AssociationConnector Association="DBModels.FK_XZ_SERIAL_NUMBER_JA_COMPANY" />
+        <AssociationConnector Association="DBModels.FK_YA_MENU_JA_COMPANY" />
+        <AssociationConnector Association="DBModels.FK_ZZ_APPLICATION_JA_COMPANY" />
+        <AssociationConnector Association="DBModels.FK_JA_EMPOLYEE_JA_DIVISION" />
+        <AssociationConnector Association="DBModels.FK_UA_SCHEDULE_SIGN_SEQUENCE_JA_DIVISION" />
+        <AssociationConnector Association="DBModels.FK_YA_ROLE_DIVISION_JA_DIVISION" />
+        <AssociationConnector Association="DBModels.FK_JA_EMPOLYEE_JA_JOB_TILE" />
+        <AssociationConnector Association="DBModels.FK_JA_EMPOLYEE_ATTACHMENT_XZ_ATTACHMENT" />
+        <AssociationConnector Association="DBModels.FK_JA_EMPOLYEE_LEAVE_JA_LEAVE" />
+        <AssociationConnector Association="DBModels.FK_UA_APPROVEMENT_ATTACHMENT_UA_APPROVEMENT_CONTROL_RECORD1" />
+        <AssociationConnector Association="DBModels.FK_UA_APPROVEMENT_ATTACHMENT_XZ_ATTACHMENT" />
+        <AssociationConnector Association="DBModels.FK_UA_APPROVEMENT_DETAIL_RECORD_UA_APPROVEMENT_CONTROL_RECORD1" />
+        <AssociationConnector Association="DBModels.FK_ZZ_APPLICATION_APPROVEMENT_UA_APPROVEMENT_CONTROL_RECORD" />
+        <AssociationConnector Association="DBModels.FK_UA_SCHEDULE_SIGN_SEQUENCE_UA_SIGN_FLOW" />
+        <AssociationConnector Association="DBModels.FK_UA_SCHEDULE_SIGN_SEQUENCE_YA_ROLES" />
+        <AssociationConnector Association="DBModels.FK_WA_MESSAGE_ADDRESSEE_WA_MESSAGE" />
+        <AssociationConnector Association="DBModels.FK_ZZ_APPLIACTION_MESSAGE_WA_MESSAGE" />
+        <AssociationConnector Association="DBModels.FK_XZ_ATTACHMENT_XZ_DOCUMENT" />
+        <AssociationConnector Association="DBModels.FK_XZ_BULLETIN_ATTACHMENT_XZ_ATTACHMENT" />
+        <AssociationConnector Association="DBModels.FK_ZZ_APPLICATION_ATTACHMENT_XZ_ATTACHMENT" />
+        <AssociationConnector Association="DBModels.FK_ZZ_BORROWER_NTOTE_CREDIT_XZ_ATTACHMENT" />
+        <AssociationConnector Association="DBModels.FK_ZZ_BUILDING_OWNERSHIP_CERTIFICATE_DESCRIPTION_XZ_ATTACHMENT" />
+        <AssociationConnector Association="DBModels.FK_ZZ_LAND_OWNERSHIP_CERTIFICATE_DESCRIPTION_XZ_ATTACHMENT" />
+        <AssociationConnector Association="DBModels.FK_ZZ_LOAN_RELATED_PARTIES_ATTACHMENT_XZ_ATTACHMENT" />
+        <AssociationConnector Association="DBModels.FK_ZZ_PERSONAL_CREDIT_REPORT_DBR22_XZ_ATTACHMENT" />
+        <AssociationConnector Association="DBModels.FK_ZZ_PERSONAL_CREDIT_REPORT_XZ_ATTACHMENT" />
+        <AssociationConnector Association="DBModels.FK_XZ_BANKBRANCH_XZ_BANK" />
+        <AssociationConnector Association="DBModels.FK_XZ_FUND_SPEC_XZ_BANKBRANCH" />
+        <AssociationConnector Association="DBModels.FK_XZ_BULLETIN_ATTACHMENT_XZ_BULLETIN" />
+        <AssociationConnector Association="DBModels.FK_XZ_DOCUMENT_BY_BUSSINES_XZ_BUSINESS" />
+        <AssociationConnector Association="DBModels.FK_XZ_DATA_IDENTIFIER_MEANING_XZ_DATA_DICTIONARY" />
+        <AssociationConnector Association="DBModels.FK_XZ_DOCUMENT_BY_BUSSINES_XZ_DOCUMENT" />
+        <AssociationConnector Association="DBModels.FK_ZZ_APPLIACTION_DOCUMENT_CHECK_XZ_DOCUMENT" />
+        <AssociationConnector Association="DBModels.FK_YA_MENU_SUB_YA_FUNCTIONS" />
+        <AssociationConnector Association="DBModels.FK_YA_ROLE_FUNCTIONS_YA_FUNCTIONS" />
+        <AssociationConnector Association="DBModels.FK_YA_MENU_SUB_YA_MENU" />
+        <AssociationConnector Association="DBModels.FK_YA_ROLE_DIVISION_YA_ROLES" />
+        <AssociationConnector Association="DBModels.FK_YA_ROLE_FUNCTIONS_YA_ROLES" />
+        <AssociationConnector Association="DBModels.FK_YA_ROLE_USERS_YA_ROLES" />
+        <AssociationConnector Association="DBModels.FK_ZZ_APPLIACTION_DOCUMENT_CHECK_ZZ_APPLICATION_LOANINFO" />
+        <AssociationConnector Association="DBModels.FK_ZZ_APPLIACTION_MESSAGE_ZZ_APPLICATION" />
+        <AssociationConnector Association="DBModels.FK_ZZ_APPLICATION_APPROVEMENT_ZZ_APPLICATION" />
+        <AssociationConnector Association="DBModels.FK_ZZ_APPLICATION_ATTACHMENT_ZZ_APPLICATION" />
+        <AssociationConnector Association="DBModels.FK_ZZ_APPLICATION_LOANINFO_ZZ_APPLICATION" />
+        <AssociationConnector Association="DBModels.FK_ZZ_BORROWER_NTOTE_CREDIT_ZZ_APPLICATION_LOANINFO" />
+        <AssociationConnector Association="DBModels.FK_ZZ_BUILDING_OWNERSHIP_CERTIFICATE_DESCRIPTION_ZZ_APPLICATION_LOANINFO" />
+        <AssociationConnector Association="DBModels.FK_ZZ_LAND_OWNERSHIP_CERTIFICATE_DESCRIPTION_ZZ_APPLICATION_LOANINFO" />
+        <AssociationConnector Association="DBModels.FK_ZZ_LOAN_RELATED_PARTIES_ZZ_APPLICATION_LOANINFO" />
+        <AssociationConnector Association="DBModels.FK_ZZ_PERSONAL_CREDIT_REPORT_DBR22_ZZ_APPLICATION_LOANINFO" />
+        <AssociationConnector Association="DBModels.FK_ZZ_PERSONAL_CREDIT_REPORT_ZZ_APPLICATION_LOANINFO" />
+        <AssociationConnector Association="DBModels.FK_ZZ_BORROWER_NTOTE_CREDIT_DETAIL_ZZ_BORROWER_NTOTE_CREDIT" />
+        <AssociationConnector Association="DBModels.FK_ZZ_BUILDING_OWNERSHIP_CERTIFICATE_ACCESSORY_ZZ_BUILDING_OWNERSHIP_CERTIFICATE_DESCRIPTION1" />
+        <AssociationConnector Association="DBModels.FK_ZZ_BUILDING_OWNERSHIP_CERTIFICATE_APPRASIAL_ZZ_BUILDING_OWNERSHIP_CERTIFICATE_DESCRIPTION" />
+        <AssociationConnector Association="DBModels.FK_ZZ_BUILDING_OWNERSHIP_CERTIFICATE_DESCRIPTION_ZZ_BUILDING_OWNERSHIP_CERTIFICATE_SHARESECTION" />
+        <AssociationConnector Association="DBModels.FK_ZZ_BUILDING_OWNERSHIP_CERTIFICATE_ONWER_RIGHTS_ZZ_BUILDING_OWNERSHIP_CERTIFICATE_DESCRIPTION1" />
+        <AssociationConnector Association="DBModels.FK_ZZ_BUILDING_OWNERSHIP_CERTIFICATE_OTHER_RIGHTS_ZZ_BUILDING_OWNERSHIP_CERTIFICATE_DESCRIPTION1" />
+        <AssociationConnector Association="DBModels.FK_ZZ_LAND_OWNERSHIP_CERTIFICATE_APPRASIAL_ZZ_LAND_OWNERSHIP_CERTIFICATE_DESCRIPTION" />
+        <AssociationConnector Association="DBModels.FK_ZZ_LAND_OWNERSHIP_CERTIFICATE_ONWER_RIGHTS_ZZ_LAND_OWNERSHIP_CERTIFICATE_DESCRIPTION1" />
+        <AssociationConnector Association="DBModels.FK_ZZ_LAND_OWNERSHIP_CERTIFICATE_OTHER_RIGHTS_ZZ_LAND_OWNERSHIP_CERTIFICATE_DESCRIPTION1" />
+        <AssociationConnector Association="DBModels.FK_ZZ_LOAN_RELATED_PARTIES_ATTACHMENT_ZZ_LOAN_RELATED_PARTIES" />
+        <AssociationConnector Association="DBModels.FK_ZZ_PERSONAL_CREDIT_REPORT_BADDEBT_ZZ_PERSONAL_CREDIT_REPORT1" />
+        <AssociationConnector Association="DBModels.FK_ZZ_PERSONAL_CREDIT_REPORT_BANKLOAN_ZZ_PERSONAL_CREDIT_REPORT1" />
+        <AssociationConnector Association="DBModels.FK_ZZ_PERSONAL_CREDIT_REPORT_CREDITCARD_ACCOUNT_ZZ_PERSONAL_CREDIT_REPORT1" />
+        <AssociationConnector Association="DBModels.FK_ZZ_PERSONAL_CREDIT_REPORT_CREDITCARD_ZZ_PERSONAL_CREDIT_REPORT1" />
+        <AssociationConnector Association="DBModels.FK_ZZ_PERSONAL_CREDIT_REPORT_DBR22_CONTENT_ZZ_PERSONAL_CREDIT_REPORT_DBR221" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
