@@ -41,7 +41,7 @@ namespace WebApiAp.Controller
             SpecificEntityRepository<JA_EMPOLYEE> db = new SpecificEntityRepository<JA_EMPOLYEE>(new MoneySQEntities("MONEYSQ_Encrypt"));
             Dictionary<string, object> dic = new Dictionary<string, object>();
             dic.Add("social_security_number", ID);
-            List<JA_EMPOLYEE> emps = db.Find("select * from [dbo].[JA_EMPOLYEE] where social_security_number= @social_security_number", dic);
+            List<JA_EMPOLYEE> emps = db.Find("select * from [dbo].[JA_EMPOLYEE] where social_security_number= @social_security_number and in_services_status='1'", dic);
             if (emps.Count > 0)
             {
                 Id = emps[0].social_security_number;
@@ -57,7 +57,7 @@ namespace WebApiAp.Controller
             SpecificEntityRepository<JA_EMPOLYEE> db = new SpecificEntityRepository<JA_EMPOLYEE>(new MoneySQEntities("MONEYSQ_Encrypt"));
             Dictionary<string, object> dic = new Dictionary<string, object>();
             dic.Add("@social_security_number", ID);
-            List<JA_EMPOLYEE> emps = db.Find("select * from [dbo].[JA_EMPOLYEE] where social_security_number= @social_security_number", dic);
+            List<JA_EMPOLYEE> emps = db.Find("select * from [dbo].[JA_EMPOLYEE] where social_security_number= @social_security_number and in_services_status='1'", dic);
             if (emps.Count > 0)
             {
                 emps[0].opr_id = emps[0].empolyee_no.ToString();
@@ -76,6 +76,22 @@ namespace WebApiAp.Controller
             //{
             //    return Request.CreateResponse(HttpStatusCode.OK, true);
             //}
+        }
+        [HttpGet]
+        [HttpPost]
+        [Route("CheckIDValidation")]
+        public bool CheckIDValidation(string ID)
+        {
+            bool result = false;
+            SpecificEntityRepository<JA_EMPOLYEE> db = new SpecificEntityRepository<JA_EMPOLYEE>(new MoneySQEntities("MONEYSQ_Encrypt"));
+            Dictionary<string, object> dic = new Dictionary<string, object>();
+            dic.Add("social_security_number", ID);
+            List<JA_EMPOLYEE> emps = db.Find("select * from [dbo].[JA_EMPOLYEE] where social_security_number= @social_security_number and in_services_status='1'", dic);
+            if (emps.Count > 0)
+            {
+                result = true;
+            }
+            return result;
         }
     }
 }
