@@ -259,3 +259,7 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/MoneySQMessageWebApi/log_files/logfile.txt20180830
+/MoneySQMessageWebApi/log_files/logfile.txt
+/MoneySQMessageWebApi/log_files/error.txt20180830
+/MoneySQMessageWebApi/log_files/error.txt

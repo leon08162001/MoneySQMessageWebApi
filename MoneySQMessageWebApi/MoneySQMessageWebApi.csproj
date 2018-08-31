@@ -161,9 +161,11 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiQuery\ZZ_APPLICATIONQuery.cs" />
     <Compile Include="Configuration\WebApiApConfig.cs" />
     <Compile Include="Controller\ZZ_APPLICATIONController.cs" />
     <Compile Include="Controller\JA_EMPOLYEEController.cs" />
+    <Compile Include="ApiQuery\JA_EMPOLYEEQuery.cs" />
     <Compile Include="MoneySQMessageWebApiException.cs" />
     <Compile Include="WebApiExceptionFilter.cs" />
     <Compile Include="Global.asax.cs">
@@ -203,7 +205,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>2179</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://192.168.43.114/MoneySQMessageWebApi/</IISUrl>
+          <IISUrl>https://192.168.43.248:1443/MoneySQMessageWebApi/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>https://60.248.159.60/MoneySQMessageWebApi/</CustomServerUrl>
