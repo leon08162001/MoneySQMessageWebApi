@@ -114,6 +114,7 @@
     <Compile Include="TopicEMSFactory.cs" />
     <Compile Include="TopicMQFactory.cs" />
     <Compile Include="TopicTibcoFactory.cs" />
+    <Compile Include="Utility\Sha1Hasher.cs" />
     <Compile Include="Utility\CustomizedQueue.cs" />
     <Compile Include="Utility\DBConnection.cs" />
     <Compile Include="Utility\DecEncCode.cs" />
