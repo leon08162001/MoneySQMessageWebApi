@@ -283,30 +283,97 @@ namespace Common.Utility
             return FailOverConnString.ToString();
         }
 
-        public static string GetMQFailOverConnString(string ConnString)
+        public static string GetMQFailOverConnString(string Urls, string Ports, bool useSSL = false)
         {
+            string OtherFailOverOptions = "?transport.randomize=true&amp;transport.trackMessages=true&amp;transport.priorityBackup=true";
             StringBuilder FailOverConnString = new StringBuilder("");
-            if (ConnString.IndexOf(",") == -1)
+            //代表只有1個IP
+            if (Urls.IndexOf(",") == -1)
             {
-
-                FailOverConnString.Append("failover:tcp://" + ConnString);
+                string port;
+                //代表只有1個port
+                if (Ports.IndexOf(",") == -1)
+                {
+                    port = Ports;
+                    if (useSSL)
+                    {
+                        FailOverConnString.Append("failover:ssl://" + Urls + ":" + port);
+                        FailOverConnString.Append("?transport.acceptInvalidBrokerCert=true");
+                        //FailOverConnString.Append("&amp;transport.clientCertFilename=amq-client.ts");
+                        //FailOverConnString.Append("&amp;transport.clientCertPassword=880816");
+                        //FailOverConnString.Append("&amp;transport.serverName=60.248.159.60");
+                        FailOverConnString.Append("&amp;transport.needClientAuth=false");
+                    }
+                    else
+                    {
+                        FailOverConnString.Append("failover:tcp://" + Urls + ":" + port);
+                    }
+                }
+                //代表多個port
+                else
+                {
+                    int portsCount = Ports.Split(new char[] { ',' }).Length;
+                    for (int i = 0; i < portsCount; i++)
+                    {
+                        if (useSSL)
+                        {
+                            FailOverConnString.Append("ssl://" + Urls + ":" + Ports.Split(new char[] { ',' })[i]);
+                            FailOverConnString.Append("?transport.acceptInvalidBrokerCert=true");
+                            FailOverConnString.Append("&amp;transport.needClientAuth=false");
+                            FailOverConnString.Append(",");
+                        }
+                        else
+                        {
+                            FailOverConnString.Append("tcp://" + Urls + ":" + Ports.Split(new char[] { ',' })[i] + ",");
+                        }
+                    }
+                    if (FailOverConnString.Length > 0)
+                    {
+                        FailOverConnString.Insert(0, "failover:(");
+                        FailOverConnString.Remove(FailOverConnString.Length - 1, 1);
+                        FailOverConnString.Append(")");
+                        FailOverConnString.Append(OtherFailOverOptions);
+                    }
+                }
             }
+            //代表多個IP
             else
             {
-                string sPort = ConnString.IndexOf(":") == -1 ? "61616" : ConnString.Substring(ConnString.IndexOf(":") + 1);
-                string sUrls = ConnString.IndexOf(":") == -1 ? ConnString : ConnString.Substring(0, ConnString.IndexOf(":"));
-                List <string> urls = sUrls.Split(new char[] { ',' }).ToList<string>();
+                string sPort = "";
+                List<string> urls = Urls.Split(new char[] { ',' }).ToList<string>();
+                int i = 0;
                 foreach (string url in urls)
                 {
-                    FailOverConnString.Append("tcp://" + url + ":" + sPort + ",");
+                    //代表只有1個port
+                    if (Ports.IndexOf(",") == -1)
+                    {
+                        sPort = string.IsNullOrEmpty(Ports) ? "61616" : Ports;
+                    }
+                    else
+                    {
+                        sPort = Ports.Split(new char[] { ',' })[i];
+                        i++;
+                    }
+                    if (useSSL)
+                    {
+                        FailOverConnString.Append("ssl://" + url + ":" + sPort);
+                        FailOverConnString.Append("?transport.acceptInvalidBrokerCert=true");
+                        FailOverConnString.Append("&amp;transport.needClientAuth=false");
+                        FailOverConnString.Append(",");
+                    }
+                    else
+                    {
+                        FailOverConnString.Append("tcp://" + url + ":" + sPort + ",");
+                    }
                 }
                 if (FailOverConnString.Length > 0)
                 {
-                    FailOverConnString.Insert(0, "failover:");
+                    FailOverConnString.Insert(0, "failover:(");
                     FailOverConnString.Remove(FailOverConnString.Length - 1, 1);
+                    FailOverConnString.Append(")");
+                    FailOverConnString.Append(OtherFailOverOptions);
                 }
             }
-            //FailOverConnString.Append(")?initialReconnectDelay=1000");
             return FailOverConnString.ToString();
         }
 
