@@ -85,11 +85,20 @@ namespace Common.LinkLayer
         /// </summary>
         SynchronizationContext UISyncContext { get; }
         TopicTypeHandler Handler { get; set; }
-
-        void Start(bool IsDurableConsumer = false, string ClientID = "");
+        /// <summary>
+        /// Qurue和Topic時,不須指定任何參數;VirtualTopic需指定第一個參數;Durable Topic則需指定兩個參數
+        /// </summary>
+        /// <param name="ClientID"></param>
+        /// <param name="IsDurableConsumer"></param>
+        void Start(string ClientID = "", bool IsDurableConsumer = false);
         void Close();
         void processMQMessage(Apache.NMS.IMessage message);
-        void Restart(bool IsDurableConsumer = false, string ClientID = "");
+        /// <summary>
+        /// Qurue和Topic時,不須指定任何參數;VirtualTopic需指定第一個參數;Durable Topic則需指定兩個參數
+        /// </summary>
+        /// <param name="ClientID"></param>
+        /// <param name="IsDurableConsumer"></param>
+        void Restart(string ClientID = "", bool IsDurableConsumer = false);
         void RemoveAllEvents();
         bool SendMQMessage(string RequestTag, System.Collections.Generic.List<MessageField> SingleMqMessage, int DelayedPerWhenNumber = 0, int DelayedMillisecond = 0);
         bool SendMQMessage(string RequestTag, System.Collections.Generic.List<System.Collections.Generic.List<MessageField>> MultiMqMessage, int DelayedPerWhenNumber = 0, int DelayedMillisecond = 0);

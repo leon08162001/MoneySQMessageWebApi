@@ -1,5 +1,6 @@
 ﻿using Apache.NMS;
 using Apache.NMS.ActiveMQ;
+//using Apache.NMS.Stomp;
 using Apache.NMS.ActiveMQ.Commands;
 using Common.HandlerLayer;
 using Common.Utility;
@@ -101,6 +102,7 @@ namespace Common.LinkLayer
         protected TopicTypeHandler _Handler;
 
         protected bool _IsEventInUIThread = false;             //觸發事件時是否回到UI Thread預設為false
+        protected bool _UseSSL = false;
 
         protected Timer HeartBeatTimer;
         protected int _HeartBeatInterval = 60;
@@ -258,6 +260,11 @@ namespace Common.LinkLayer
             get { return _IsEventInUIThread; }
             set { _IsEventInUIThread = value; }
         }
+        public bool UseSSL
+        {
+            get { return _UseSSL; }
+            set { _UseSSL = value; }
+        }
 
         /// <summary>
         /// 心跳訊息間隔(秒)
@@ -311,20 +318,132 @@ namespace Common.LinkLayer
             _PassWord = Pwd;
         }
 
-        public void Start(bool IsDurableConsumer = false, string ClientID = "")
+        public bool CheckActiveMQAlive()
+        {
+            string urls;
+            string ports;
+            string url = "";
+            urls = _Uri.Split(new char[] { ':' })[0];
+            ports = _Uri.Split(new char[] { ':' })[1];
+            //代表url只有1個IP
+            if (urls.IndexOf(",") == -1)
+            {
+                bool result = false;
+                //代表只有1個port
+                if (ports.IndexOf(",") == -1)
+                {
+                    url = "tcp://" + urls + ":" + ports;
+                    _Factory = new ConnectionFactory(url);
+                    try
+                    {
+                        if (_UserName != "" && _PassWord != "")
+                        {
+                            _Connection = _Factory.CreateConnection(_UserName, _PassWord);
+                        }
+                        else
+                        {
+                            _Connection = _Factory.CreateConnection();
+                        }
+                        result = true;
+                    }
+                    catch (NMSException ex)
+                    {
+                        if (log.IsErrorEnabled) log.Error("IsActiveMQAlive() Error", ex);
+                        result = false;
+                    }
+                }
+                //代表多個port
+                else
+                {
+                    foreach( string port in ports.Split(new char[] { ',' }))
+                    {
+                        url = "tcp://" + urls + ":" + port;
+                        _Factory = new ConnectionFactory(url);
+                        try
+                        {
+                            if (_UserName != "" && _PassWord != "")
+                            {
+                                _Connection = _Factory.CreateConnection(_UserName, _PassWord);
+                            }
+                            else
+                            {
+                                _Connection = _Factory.CreateConnection();
+                            }
+                            result = true;
+                            break;
+                        }
+                        catch (NMSException ex)
+                        {
+                            if (log.IsErrorEnabled) log.Error("IsActiveMQAlive() Error", ex);
+                            continue;
+                        }
+                    }
+                }
+                return result;
+            }
+            //代表url有多個IP
+            else
+            {
+                bool result = false;
+                List<string> lstUrl = urls.Split(new char[] { ',' }).ToList<string>();
+                int i = 0;
+                foreach (string _url in lstUrl)
+                {
+                    //代表只有1個port
+                    if (ports.IndexOf(",") == -1)
+                    {
+                        url = "tcp://" + _url + ":" + ports;
+                    }
+                    //代表多個port
+                    else
+                    {
+                        string[] lstPort = ports.Split(new char[] { ',' });
+                        url = "tcp://" + _url + ":" + ports.Split(new char[] { ',' })[i];
+                        i++;
+                    }
+                    _Factory = new ConnectionFactory(url);
+                    try
+                    {
+                        if (_UserName != "" && _PassWord != "")
+                        {
+                            _Connection = _Factory.CreateConnection(_UserName, _PassWord);
+                        }
+                        else
+                        {
+                            _Connection = _Factory.CreateConnection();
+                        }
+                        result = true;
+                        break;
+                    }
+                    catch (NMSException ex)
+                    {
+                        if (log.IsErrorEnabled) log.Error("IsActiveMQAlive() Error", ex);
+                        continue;
+                    }
+                }
+                return result;
+            }
+        }
+        public void Start(string ClientID = "", bool IsDurableConsumer = false)
         {
             string SingleUrl = "";
             string Urls = "";
             _IsDurableConsumer = IsDurableConsumer;
             _ClientID = ClientID;
-            if (_Uri.IndexOf(",") == -1)
+            string urls;
+            string ports;
+            urls = _Uri.Split(new char[] { ':' })[0];
+            ports = _Uri.Split(new char[] { ':' })[1];
+            //代表只有1個IP
+            if (urls.IndexOf(",") == -1)
             {
-                SingleUrl = _Uri;
+                SingleUrl = urls;
             }
+            //代表多個IP
             else
             {
-                SingleUrl = _Uri.Split(new char[] { ',' })[0];
-                Urls = _Uri;
+                SingleUrl = urls.Split(new char[] { ',' })[0];
+                Urls = urls;
             }
             if (!SingleUrl.Equals("") && SingleUrl.IndexOf(":") > -1)
             {
@@ -339,11 +458,11 @@ namespace Common.LinkLayer
                 {
                     if (Urls.Equals(""))
                     {
-                        AMQSharedConnection.Open(SingleUrl, _UserName, _PassWord, _IsDurableConsumer, _ClientID);
+                        AMQSharedConnection.Open(SingleUrl, ports, _UserName, _PassWord, _UseSSL, _IsDurableConsumer, _ClientID);
                     }
                     else
                     {
-                        AMQSharedConnection.Open(Urls, _UserName, _PassWord, _IsDurableConsumer, _ClientID);
+                        AMQSharedConnection.Open(Urls, ports, _UserName, _PassWord, _UseSSL, _IsDurableConsumer, _ClientID);
                     }
                     _Session = AMQSharedConnection.GetConnection().CreateSession(AcknowledgementMode.AutoAcknowledge);
                     _Connection = AMQSharedConnection.GetConnection();
@@ -360,11 +479,11 @@ namespace Common.LinkLayer
                     //{
                     if (Urls.Equals(""))
                     {
-                        _Factory = new ConnectionFactory(Util.GetMQFailOverConnString(SingleUrl));
+                        _Factory = new ConnectionFactory(Util.GetMQFailOverConnString(SingleUrl, ports, _UseSSL));
                     }
                     else
                     {
-                        _Factory = new ConnectionFactory(Util.GetMQFailOverConnString(Urls));
+                        _Factory = new ConnectionFactory(Util.GetMQFailOverConnString(Urls, ports, _UseSSL));
                     }
                     try
                     {
@@ -441,12 +560,12 @@ namespace Common.LinkLayer
             }
         }
 
-        public void Restart(bool IsDurableConsumer = false, string ClientID = "")
+        public void Restart(string ClientID = "", bool IsDurableConsumer = false)
         {
             try
             {
                 Close();
-                Start(IsDurableConsumer, ClientID);
+                Start(ClientID, IsDurableConsumer);
                 //InitialHeartBeat();
             }
             catch (Exception ex)
@@ -662,10 +781,17 @@ namespace Common.LinkLayer
                     IBytesMessage msg = _Producer.CreateBytesMessage(bytes);
                     msg.Properties.SetString("id", ID);
                     msg.Properties.SetString("filename", FileName);
+
+                    //IStreamMessage msg1 = _Producer.CreateStreamMessage();
+                    //msg1.Properties.SetString("id", ID);
+                    //msg1.Properties.SetString("filename", FileName);
+                    //msg1.WriteBytes(bytes);
+
                     if ((_Session as Apache.NMS.ActiveMQ.Session).Started)
                     {
                         TimeSpan TS = _MessageTimeOut == 0 ? TimeSpan.Zero : TimeSpan.FromDays(_MessageTimeOut);
                         _Producer.Send(msg, Apache.NMS.MsgDeliveryMode.NonPersistent, Apache.NMS.MsgPriority.Highest, TS);
+                        //_Producer.Send(msg1, Apache.NMS.MsgDeliveryMode.NonPersistent, Apache.NMS.MsgPriority.Highest, TS);
                         isSend = true;
                     }
                     else
@@ -704,10 +830,18 @@ namespace Common.LinkLayer
                     IBytesMessage msg = _Producer.CreateBytesMessage(FileBytes);
                     msg.Properties.SetString("id", ID);
                     msg.Properties.SetString("filename", FileName);
+
+                    //IStreamMessage msg1 = _Producer.CreateStreamMessage();
+                    //msg1.Properties.SetString("id", ID);
+                    //msg1.Properties.SetString("filename", FileName);
+                    //msg1.Properties.SetString("length", FileBytes.Length.ToString());
+                    //msg1.WriteBytes(FileBytes);
+
                     if ((_Session as Apache.NMS.ActiveMQ.Session).Started)
                     {
                         TimeSpan TS = _MessageTimeOut == 0 ? TimeSpan.Zero : TimeSpan.FromDays(_MessageTimeOut);
                         _Producer.Send(msg, Apache.NMS.MsgDeliveryMode.NonPersistent, Apache.NMS.MsgPriority.Highest, TS);
+                        //_Producer.Send(msg1, Apache.NMS.MsgDeliveryMode.NonPersistent, Apache.NMS.MsgPriority.Highest, TS);
                         isSend = true;
                     }
                     else
@@ -778,11 +912,13 @@ namespace Common.LinkLayer
                         {
                             if (_Selector.Equals(""))
                             {
-                                QueueConsumer[i] = _Session.CreateConsumer(new ActiveMQQueue(_VirtualTopic.Replace("*", Util.GetMacAddress()) + _ListenName));
+                                //QueueConsumer[i] = _Session.CreateConsumer(new ActiveMQQueue(_VirtualTopic.Replace("*", Util.GetMacAddress()) + _ListenName));
+                                QueueConsumer[i] = _Session.CreateConsumer(new ActiveMQQueue(_VirtualTopic.Replace("*", _ClientID) + _ListenName));
                             }
                             else
                             {
-                                QueueConsumer[i] = _Session.CreateConsumer(new ActiveMQQueue(_VirtualTopic.Replace("*", Util.GetMacAddress()) + _ListenName), _Selector);
+                                //QueueConsumer[i] = _Session.CreateConsumer(new ActiveMQQueue(_VirtualTopic.Replace("*", Util.GetMacAddress()) + _ListenName), _Selector);
+                                QueueConsumer[i] = _Session.CreateConsumer(new ActiveMQQueue(_VirtualTopic.Replace("*", _ClientID) + _ListenName), _Selector);
                             }
                             QueueConsumer[i].Listener += new MessageListener(listener_messageReceivedEventHandler);
                             _ListVirtualTopicConsumer.Add(QueueConsumer[i]);
@@ -1030,11 +1166,13 @@ namespace Common.LinkLayer
                         {
                             if (_Selector.Equals(""))
                             {
-                                QueueConsumer[i] = _Session.CreateConsumer(new ActiveMQQueue(_VirtualTopic.Replace("*", Util.GetMacAddress()) + _ListenName));
+                                //QueueConsumer[i] = _Session.CreateConsumer(new ActiveMQQueue(_VirtualTopic.Replace("*", Util.GetMacAddress()) + _ListenName));
+                                QueueConsumer[i] = _Session.CreateConsumer(new ActiveMQQueue(_VirtualTopic.Replace("*", _ClientID) + _ListenName));
                             }
                             else
                             {
-                                QueueConsumer[i] = _Session.CreateConsumer(new ActiveMQQueue(_VirtualTopic.Replace("*", Util.GetMacAddress()) + _ListenName), _Selector);
+                                // QueueConsumer[i] = _Session.CreateConsumer(new ActiveMQQueue(_VirtualTopic.Replace("*", Util.GetMacAddress()) + _ListenName), _Selector);
+                                QueueConsumer[i] = _Session.CreateConsumer(new ActiveMQQueue(_VirtualTopic.Replace("*", _ClientID) + _ListenName), _Selector);
                             }
                             QueueConsumer[i].Listener += new MessageListener(listener_messageReceivedEventHandler);
                             _ListVirtualTopicConsumer.Add(QueueConsumer[i]);
