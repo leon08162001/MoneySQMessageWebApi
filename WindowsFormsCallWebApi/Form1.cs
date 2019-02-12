@@ -25,7 +25,7 @@ namespace WindowsFormsCallWebApi
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var client = new RestClient("http://192.168.43.114:90/MoneySQMessageWebApi/api/MoneySQ/JA_EMPOLYEE/GetEmployeeID?id=F123755175");
+            var client = new RestClient("http://192.168.43.127:90/MoneySQMessageWebApi/api/MoneySQ/JA_EMPOLYEE/GetEmployeeID?id=F123755175");
             var request = new RestRequest(Method.GET);
             request.AddHeader("cache-control", "no-cache");
             request.AddHeader("content-type", "application/json");
@@ -33,7 +33,7 @@ namespace WindowsFormsCallWebApi
             bool b = response.IsSuccessful;
             string s = response.Content;
 
-            client = new RestClient("http://192.168.43.114:90/MoneySQMessageWebApi/api/MoneySQ/JA_EMPOLYEE/UpdateEmployeePushByID?id=F123755175");
+            client = new RestClient("http://192.168.43.127:90/MoneySQMessageWebApi/api/MoneySQ/JA_EMPOLYEE/UpdateEmployeePushByID?id=F123755175");
             request = new RestRequest(Method.PUT);
             request.AddHeader("cache-control", "no-cache");
             request.AddHeader("content-type", "application/json");
@@ -41,7 +41,7 @@ namespace WindowsFormsCallWebApi
             b = response.IsSuccessful;
 
 
-            Configuration.MyWebApiProxyBaseAddress = "http://192.168.43.114:90/MoneySQMessageWebApi/";
+            Configuration.MyWebApiProxyBaseAddress = "http://192.168.43.127:90/MoneySQMessageWebApi/";
             JA_EMPOLYEEClient JA_EMPOLYEE = new JA_EMPOLYEEClient();
             //ZZ_APPLICATIONClient ZZ_APPLICATION = new ZZ_APPLICATIONClient();
 
